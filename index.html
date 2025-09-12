@@ -227,6 +227,105 @@
       </ul>
     </section>
     
+    <section id="problem-intro" class="slide" style="background-image: url('img/network.jpg'); background-size: cover; box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6)" resource="#problem-intro">
+        <h2 class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Focus on Knowledge Graphs</h2>
+        <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
+            <li class="next">Graph-based data model</li>
+            <li class="next"><p class="indent" style="font-style:italic">When data does not fit into a fixed relation model</p></li>
+            <li class="next">Based on Semantic Web / Linked Data technologies</li>
+            <li class="next"><p class="indent" style="font-style:italic">RDF, SPARQL, &mldr;</p></li>
+            <li class="next"><p class="indent" style="font-style:italic">Interlinking data across multiple data sources</p></li>
+        </ul>
+    </section>
+    
+    <section id="sparql-eps" class="slide" inlist="" rel="schema:hasPart" resource="#sparql-eps">
+      <h2 property="schema:name">Publishing Knowledge Graphs<br \>as <em>SPARQL Endpoints</em></h2>
+      <p><strong>SPARQL endpoint</strong>: API that accepts SPARQL queries, and replies with results.</p>
+      <ul>
+          <li>
+          	  <h3>Most popular way to publish Knowledge Graphs</h3>
+			  <span class="indent">Alternatives are data dumps and Linked Data Documents</span>
+          </li>
+          <li>
+          	  <h3>Very powerful</h3>
+			  <span class="indent">Very complex queries can be formulated with SPARQL</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="problem-sparqlep-availability" class="slide" inlist="" rel="schema:hasPart" resource="#problem-sparqlep-availability">
+      <h2 property="schema:name">SPARQL endpoints have low availabily</h2>
+      <h3>Public endpoints have an availability of 95%.</h3>
+      <p class="indent">&rarr; ~1.5 days downtime per month!</p>
+      <p style="font-size: 0.65em">Vandenbussche, Pierre-Yves, et al. "SPARQLES: Monitoring public SPARQL endpoints." Semantic web 8.6 (2017): 1049-1065.</p>
+      <ul>
+          <li>
+          	  <h3>SPARQL query expressivity is high</h3>
+			  <span class="indent">Some queries can be computationally intensive</span>
+          </li>
+          <li>
+          	  <h3>Publicly accessible</h3>
+			  <span class="indent">An unbounded number of clients can send queries</span>
+          </li>
+      </ul>
+    </section>
+    
+    <section id="problem-sparqlep-restrictions" class="slide" inlist="" rel="schema:hasPart" resource="#problem-sparqlep-restrictions">
+      <h2 property="schema:name">SPARQL endpoints have restrictions</h2>
+      <h3>To counter availability issues</h3>
+      <ul>
+          <li>
+          	  <h3>Timeouts</h3>
+			  <span class="indent">Limit execution time per query</span>
+          </li>
+          <li>
+          	  <h3>Rate limits</h3>
+			  <span class="indent">Limit number of queries a client can send</span>
+          </li>
+      </ul>
+      <h3 class="indent">&rarr; Limits types and number of queries that can be executed!</h3>
+    </section>
+    
+    <section id="ldf" class="slide" inlist="" rel="schema:hasPart" resource="#ldf">
+      <h2 property="schema:name">Alternatives to SPARQL endpoints</h2>
+      <h3>To limit expressivity</h3>
+      <center><img src="img/ldf.png" alt="LDF axis" width="100%" \></center>
+      <p class="indent">Linked Data Fragments (LDF) axis: investigates trade-offs between server and client effort for query execution.</p>
+      <p style="font-size: 0.6em">Verborgh, Ruben, et al. "Triple pattern fragments: a low-cost knowledge graph interface for the web." Journal of Web Semantics 37 (2016): 184-206.</p>
+    </section>
+    
+    <section id="problem-ldf-heterogeneity" class="slide" inlist="" rel="schema:hasPart" resource="#problem-ldf-heterogeneity">
+      <h2 property="schema:name">LDF interfaces complicate federation</h2>
+      <br \>
+      <center><img src="img/sparql-federated.svg" width="75%" /></center>
+      <h3 class="indent">&rarr; Federation engines must combine data across heterogeneous APIs</h3>
+    </section>
+    
+    <section id="solid" class="slide" inlist="" rel="schema:hasPart" resource="#solid">
+      <img src="img/solid-logo.svg" width="20%" style="float: right" />
+      <h2 property="schema:name">Personal data</h2>
+      <h3>Decentralization initiatives offer users full control of where data is stored and who can access it</h2>
+      <center>
+          <img src="img/solid-pods.svg" alt="Solid Pods" width="450px" />
+      </center>
+    </section>
+    
+    <section id="problem-protected" class="slide" inlist="" rel="schema:hasPart" resource="#problem-protected">
+      <h2 property="schema:name">How to query protected data?</h2>
+      <ul>
+          <li>
+          	  <h3>Privacy preservation</h3>
+			  <span class="indent">Ensure only authorized agents can access data.</span><br \>
+              <span class="indent">Trusted servers? Client-side? Combinations?</span>
+          </li>
+          <li>
+          	  <h3>Trustworthiness</h3>
+			  <span class="indent">Allow inspection of <em>how</em> and <em>where</em> data was combined</span>
+          </li>
+      </ul>
+      <h3 class="indent">&rarr; Lack of understanding of how to do this for decentralized data!</h3>
+    </section>
+    
     <section id="index-projects" class="slide index" inlist="" rel="schema:hasPart" resource="#index-projects">
       <ul>
         <li><a href="#index-querying">Querying in a decentralized Web</a></li>
